@@ -1,4 +1,5 @@
 https://realpython.com/python-complex-numbers/
 https://docs.python.org/3/library/cmath.html
 https://www.python-engineer.com/posts/complex-numbers-python/
+http://algebra2lineal.blogspot.com/
 
