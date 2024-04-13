@@ -6,19 +6,21 @@
 """
 Modulo de ecuaciones lineales
 """
+
 from random import randint
 
+
 def aleatorio(inicio, fin):
-    """ Genera un número aleatorio entre inicio y fin.
-        También le agrega un signo aleatoriamente """
-    ret = randint(inicio,fin)
-    if ret and randint(0,1):
+    """Genera un número aleatorio entre inicio y fin.
+    También le agrega un signo aleatoriamente"""
+    ret = randint(inicio, fin)
+    if ret and randint(0, 1):
         ret = -ret
     return ret
 
 
 def str_ecuacion(a, b, c):
-    """ Regresa una ecuación de la forma Ax + By = C """
+    """Regresa una ecuación de la forma Ax + By = C"""
     ret = "    "
     if a:
         ret = f"{a:2}x "
@@ -30,24 +32,24 @@ def str_ecuacion(a, b, c):
 
 
 def problema_de_ecuaciones_lineales():
-    """ Muestra el problema de ecuaciones lineales """
+    """Muestra el problema de ecuaciones lineales"""
     #  A1x + B1y = C1
     #  A2x + B2y = C2
-    a1 = aleatorio(0,5)
-    b1 = aleatorio(0,5)
-    c1 = aleatorio(0,5)
-    a2 = aleatorio(0,5)
-    b2 = aleatorio(0,5)
-    c2 = aleatorio(0,5)
+    a1 = aleatorio(0, 5)
+    b1 = aleatorio(0, 5)
+    c1 = aleatorio(0, 5)
+    a2 = aleatorio(0, 5)
+    b2 = aleatorio(0, 5)
+    c2 = aleatorio(0, 5)
 
     print("Resuelve el siguiente sistema de ecuaciones:\n")
     print(str_ecuacion(a1, b1, c1))
-    print(str_ecuacion(a2, b2, c2),"\n")
+    print(str_ecuacion(a2, b2, c2), "\n")
 
     # Determinante del sistema X Y
     #  | A1   B1 |
     #  | A2   B2 |
-    D  = a1 * b2 - a2 * b1
+    D = a1 * b2 - a2 * b1
 
     # Esperamos a que den un enter
     input("Ingresa un Enter para mostrar la respuesta:")
@@ -64,8 +66,8 @@ def problema_de_ecuaciones_lineales():
         Dy = a1 * c2 - a2 * c1
 
         # Sacamos la solución
-        X = Dx/D
-        Y = Dy/D
+        X = Dx / D
+        Y = Dy / D
 
         print("La solución es:")
         print(f"  X = {Dx}/{D} = {X}")
