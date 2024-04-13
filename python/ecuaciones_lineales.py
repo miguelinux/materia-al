@@ -6,15 +6,16 @@
 """
 Modulo de ecuaciones lineales
 """
-
 from random import randint
 
 
 def aleatorio(inicio, fin):
     """Genera un número aleatorio entre inicio y fin.
     También le agrega un signo aleatoriamente"""
-    ret = randint(inicio, fin)
-    if ret and randint(0, 1):
+    # [B311:blacklist] Standard pseudo-random generators are not suitable
+    # for security/cryptographic purposes.
+    ret = randint(inicio, fin)  # nosec B311
+    if ret and randint(0, 1):  # nosec B311
         ret = -ret
     return ret
 
