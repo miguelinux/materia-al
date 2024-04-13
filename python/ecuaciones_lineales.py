@@ -6,6 +6,7 @@
 """
 Modulo de ecuaciones lineales
 """
+
 from random import randint
 
 
