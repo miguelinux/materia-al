@@ -12,6 +12,7 @@ from random import randint
 
 from alumnos import leer_alumnos
 from ecuaciones_lineales import problema_de_ecuaciones_lineales
+from matrices import problema_de_matrices
 
 
 def main():
@@ -33,7 +34,14 @@ def main():
         else:
             print()
         print("\npasa al pizarrón y ")
-        problema_de_ecuaciones_lineales()
+        problema = randint(0, 1)  # nosec B311
+        if problema:
+            problema_de_ecuaciones_lineales()
+        else:
+            problema_de_matrices()
+
+        # Esperamos a que den un enter
+        input("Da un enter para continuar:")
 
 
 if __name__ == "__main__":
