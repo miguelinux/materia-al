@@ -75,6 +75,6 @@ def problema_de_ecuaciones_lineales():
         print(f"  X = {determinante_x}/{determinante} = {x}")
         print(f"  Y = {determinante_y}/{determinante} = {y}")
     else:
-        print("El Determinate del sistema es cero, por lo tanto")
+        print("El Determinante del sistema es cero, por lo tanto")
         print("el sistema no tiene solución ó tiene infinitas soluciones")
         print("ya que las ecuaciones o son paralelas o es la misma linea")
