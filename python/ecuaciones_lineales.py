@@ -7,6 +7,8 @@
 Modulo de ecuaciones lineales
 """
 
+from random import randint
+
 from funciones import aleatorio
 
 
@@ -36,6 +38,16 @@ def problema_de_ecuaciones_lineales():
     print("Resuelve el siguiente sistema de ecuaciones:\n")
     print(str_ecuacion(a1, b1, c1))
     print(str_ecuacion(a2, b2, c2), "\n")
+
+    metodos = (
+        "sustitución",
+        "igualación",
+        "eliminación/reducción (suma,resta)",
+        "Cramer (determinantes)",
+    )
+    print("por el método de ", end="")
+    cual = randint(0, 3)  # nosec B311
+    print(metodos[cual])
 
     # Determinante del sistema X Y
     #  | A1   B1 |
