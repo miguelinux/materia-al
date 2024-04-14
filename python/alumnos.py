@@ -12,22 +12,23 @@ def leer_alumnos(nombre_del_archivo_csv):
     """
     Lee los alumnos del archivo
     """
-    lista_alumnos = list()
+    lista_alumnos = []
 
-    archivo = open(nombre_del_archivo_csv)
+    with open(nombre_del_archivo_csv, "r", encoding="utf8") as archivo:
+        # Leemos la linea de encabezado
+        linea = archivo.readline()
 
-    # Leemos la linea de encabezado
-    linea = archivo.readline()
+        for linea in archivo:
+            lista = linea.strip().split(",")
+            si_vino = False
+            if lista[4]:
+                si_vino = True
+            alumno = {
+                "matricula": lista[1],
+                "nombre": lista[3],
+                "apellidos": lista[2],
+                "vino": si_vino,
+            }
+            lista_alumnos.append(alumno)
 
-    for linea in archivo:
-        lista = linea.strip().split(",")
-        si_vino = False
-        if lista[4]:
-            si_vino = True
-        alumno = dict(
-            matricula=lista[1], nombre=lista[3], apellidos=lista[2], vino=si_vino
-        )
-        lista_alumnos.append(alumno)
-
-    archivo.close()
     return lista_alumnos

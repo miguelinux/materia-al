@@ -51,29 +51,29 @@ def problema_de_ecuaciones_lineales():
     # Determinante del sistema X Y
     #  | A1   B1 |
     #  | A2   B2 |
-    D = a1 * b2 - a2 * b1
+    determinante = a1 * b2 - a2 * b1
 
     # Esperamos a que den un enter
     input("Ingresa un Enter para mostrar la respuesta:")
 
-    if D:
+    if determinante:
         # Determinante sustituyendo X
         #  | C1   B1 |
         #  | C2   B2 |
-        Dx = c1 * b2 - c2 * b1
+        determinante_x = c1 * b2 - c2 * b1
 
         # Determinante sustituyendo Y
         #  | A1   C1 |
         #  | A2   C2 |
-        Dy = a1 * c2 - a2 * c1
+        determinante_y = a1 * c2 - a2 * c1
 
         # Sacamos la solución
-        X = Dx / D
-        Y = Dy / D
+        x = determinante_x / determinante
+        y = determinante_y / determinante
 
         print("La solución es:")
-        print(f"  X = {Dx}/{D} = {X}")
-        print(f"  Y = {Dy}/{D} = {Y}")
+        print(f"  X = {determinante_x}/{determinante} = {x}")
+        print(f"  Y = {determinante_y}/{determinante} = {y}")
     else:
         print("El Determinate del sistema es cero, por lo tanto")
         print("el sistema no tiene solución ó tiene infinitas soluciones")
