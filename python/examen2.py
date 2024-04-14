@@ -9,7 +9,8 @@ Examen II
 """
 
 from random import randint
-import alumnos
+
+from alumnos import leer_alumnos
 from ecuaciones_lineales import problema_de_ecuaciones_lineales
 
 
@@ -17,14 +18,21 @@ def main():
     """
     Comentario de la función
     """
-    lista = alumnos.leer_alumnos("alumnos.csv")
+    lista = leer_alumnos("alumnos.csv")
     tam = len(lista)
 
-    for i in range(tam):
-        siguiente = randint(0,len(lista)-1)
+    for _ in range(tam):
+        # [B311:blacklist] Standard pseudo-random generators are not suitable
+        # for security/cryptographic purposes.
+        siguiente = randint(0, len(lista) - 1)  # nosec B311
         alumno = lista[siguiente]
         lista.pop(siguiente)
-        print("Por favor\n\n", alumno["nombre"], alumno["apellidos"], "\n\npasa al pizarrón y ")
+        print("Por favor\n\n", alumno["nombre"], alumno["apellidos"], end="")
+        if alumno["vino"]:
+            print("  (Si vino)")
+        else:
+            print()
+        print("\npasa al pizarrón y ")
         problema_de_ecuaciones_lineales()
 
 
