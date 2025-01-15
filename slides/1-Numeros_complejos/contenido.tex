@@ -53,10 +53,79 @@
   una solución.
 \end{frame}
 
-\begin{frame}[c]{Definición}
-  Sea $z \in \mathbb{C}$ donde $z = a + ib = \{ a,b \in \mathbb{R}$ y $ i^2
-  = -1 \}$
+\begin{frame}[c]{Forma binómica}
+  \begin{block}{Definición}
+    Un número complejo $z \in \mathbb{C}$ es un número de la forma
+    \begin{center}
+      $z = a + ib$
+    \end{center}
+    o ($z = a + bi$), donde $ \{ a,b \in \mathbb{R}$ y
+    $ i^2 = -1 \}$
+  \end{block}
+  \pausa
+  \begin{itemize}
+    \item A $i$ se le llama \emph{unidad imaginaria}
+    \item Los número reales $a$ y $b$ se conocen, respectivamente, como
+      \emph{parte real} y \emph{parte imaginaria}
+  \end{itemize}
+  \begin{displaymath}
+    Re(z) = a, \qquad  Im(z) = b
+  \end{displaymath}
 \end{frame}
+
+\begin{frame}[c]{Forma binómica}
+  Dos números $z,w \in \mathbb{C}$, son iguales, si y sólo si,
+  \begin{displaymath}
+    Re(z) = Re(w), \qquad  Im(z) = Im(w)
+  \end{displaymath}
+
+  Sea $z = a + bi$.
+  \begin{itemize}
+    \item Si $a=0$, escribiremos $z=bi$ (\textbf{Número imaginario puro}).
+    \item Si $b=0$, escribiremos $z=a + 0i$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{columns}
+    \column{0.5\textwidth}
+      \begin{tikzpicture}
+        \coordinate (O) at (0,0);
+        \draw[->] (-0.3,0) -- (4,0) coordinate[label = {below:$reales$}] ;
+        \draw[->] (0,-0.3) -- (0,4) coordinate[label = {right:$imaginarios$}] ;
+        \draw[densely dotted]  (1,0) node[anchor=north] {$a$} -- (1,1) ;
+        \draw[densely dotted]  (0,1) node[anchor=east] {$b$} -- (1,1);
+        \node[circle, fill,inner sep=1.5pt] at (1,1) {};
+        \node[anchor=west] at (1,1) {$P = (a,b)$};
+      \end{tikzpicture}
+    \column{0.5\textwidth}
+      Un número complejo $z = a+bi$ lo podemos representar por el punto $P$
+      del plano que tiene por coordenadas cartesianas $(a,b)$.
+  \end{columns}
+\end{frame}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{columns}
+    \column{0.5\textwidth}
+      \begin{tikzpicture}
+        \coordinate (O) at (0,0);
+        \draw[->] (-0.3,0) -- (4,0) coordinate[label = {below:$reales$}] ;
+        \draw[->] (0,-0.3) -- (0,4) coordinate[label = {right:$imaginarios$}] ;
+        \draw[-{Latex[length=3mm]}] (0,0) -- (1,1);
+        \node[anchor=west] at (1,1) {$P = (a,b)$};
+      \end{tikzpicture}
+    \column{0.5\textwidth}
+      A veces también lo representamos por el vector posición
+      $\overrightarrow{OP}$ del punto $P$.
+
+      \vspace{\baselineskip}
+      Interpretado de esta manera, el plano cartesiano se le denomina
+      también \textbf{plano complejo}. El eje de abscisas se suele denomina
+      \textbf{eje real} y el eje de ordenadas \textbf{eje imaginario}
+  \end{columns}
+\end{frame}
+
+\section{Operaciones fundamentales}
 
 \begin{frame}[fragile]
   \frametitle{Titulo}
@@ -64,4 +133,40 @@
   \vspace{\baselineskip}
   \begin{lstlisting}[language=Python]
   \end{lstlisting}
+\end{frame}
+
+\section{Potencias de $i$, módulo o valor absoluto}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{block}{Definición}
+  Sea $z \in \mathbb{C}$ donde $z = a + ib = \{ a,b \in \mathbb{R}$ y $ i^2
+  = -1 \}$
+  \end{block}
+\end{frame}
+
+\section{Forma polar y exponencial}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{block}{Definición}
+  Sea $z \in \mathbb{C}$ donde $z = a + ib = \{ a,b \in \mathbb{R}$ y $ i^2
+  = -1 \}$
+  \end{block}
+\end{frame}
+
+\section{Teorema de De Moivre, potencias y extracción de raíces}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{block}{Definición}
+  Sea $z \in \mathbb{C}$ donde $z = a + ib = \{ a,b \in \mathbb{R}$ y $ i^2
+  = -1 \}$
+  \end{block}
+\end{frame}
+
+\section{Ecuaciones polinómicas}
+
+\begin{frame}[c]{Forma binómica}
+  \begin{block}{Definición}
+  Sea $z \in \mathbb{C}$ donde $z = a + ib = \{ a,b \in \mathbb{R}$ y $ i^2
+  = -1 \}$
+  \end{block}
 \end{frame}
